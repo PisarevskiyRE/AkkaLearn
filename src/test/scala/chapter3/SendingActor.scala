@@ -1,6 +1,7 @@
-import akka.actor.{ActorSystem, Props}
-import akka.testkit.{TestActorRef, TestKit}
-import chapter3.{SendingActor, SilentActor}
+package chapter3
+
+import akka.actor.ActorSystem
+import akka.testkit.TestKit
 import org.scalatest.matchers.must.Matchers
 import org.scalatest.wordspec.AnyWordSpecLike
 import testdriven.StopSystemAfterAll

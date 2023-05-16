@@ -1,11 +1,10 @@
-import akka.actor.{ActorSystem, Props}
-import akka.testkit.{TestActorRef, TestKit}
-import chapter3.{FilteringActor, SendingActor, SilentActor}
+package chapter3
+
+import akka.actor.ActorSystem
+import akka.testkit.TestKit
 import org.scalatest.matchers.must.Matchers
 import org.scalatest.wordspec._
 import testdriven.StopSystemAfterAll
-
-import scala.util.Random
 
 class FilteringActorTest extends TestKit(ActorSystem("testsystem"))
   with Matchers

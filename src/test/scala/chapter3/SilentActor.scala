@@ -1,11 +1,10 @@
-import akka.actor.{Actor, ActorRef, ActorSystem, Props}
+package chapter3
+
+import akka.actor.ActorSystem
 import akka.testkit.{TestActorRef, TestKit}
-import chapter3.{SendingActor, SilentActor}
 import org.scalatest.matchers.must.Matchers
 import org.scalatest.wordspec.AnyWordSpecLike
 import testdriven.StopSystemAfterAll
-
-import scala.util.Random
 
 
 class SilentActorTest extends TestKit(ActorSystem("testsystem"))
