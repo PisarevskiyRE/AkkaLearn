@@ -1,7 +1,8 @@
-package chapter3
+package chapter3test
 
 import akka.actor._
 import akka.testkit.TestKit
+import chapter3.Greeting
 import org.scalatest.wordspec.AnyWordSpecLike
 import testdriven.StopSystemAfterAll
 

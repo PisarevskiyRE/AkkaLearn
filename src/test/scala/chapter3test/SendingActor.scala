@@ -1,13 +1,14 @@
-package chapter3
+package chapter3test
 
 import akka.actor.ActorSystem
 import akka.testkit.TestKit
+import chapter3.SendingActor
 import org.scalatest.matchers.must.Matchers
 import org.scalatest.wordspec.AnyWordSpecLike
 import testdriven.StopSystemAfterAll
 
+import chapter3.SendingActor._
 import scala.util.Random
-
 
 class SendingActor extends TestKit(ActorSystem("testSystem"))
   with Matchers
@@ -17,7 +18,7 @@ class SendingActor extends TestKit(ActorSystem("testSystem"))
 
   "Посылающий актер" must {
     "отправлять сообщение другому агенту после завершения обработки" in {
-      import chapter3.SendingActor._
+
       val props = SendingActor.props(testActor)
       val sendingActor = system.actorOf(props, "sendingActor")
 

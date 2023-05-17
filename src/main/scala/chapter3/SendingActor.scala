@@ -1,6 +1,5 @@
 package chapter3
 
-
 import akka.actor.{Actor, ActorRef, Props}
 
 class SendingActor(receiver: ActorRef) extends Actor{

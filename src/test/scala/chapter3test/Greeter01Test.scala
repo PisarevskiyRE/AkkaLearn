@@ -1,8 +1,9 @@
-package chapter3
+package chapter3test
 
 import akka.actor.{ActorSystem, Props}
 import akka.testkit.{CallingThreadDispatcher, EventFilter, TestKit}
-import chapter3.Greeter01Test.testSystem
+import chapter3.{Greeter, Greeting}
+import chapter3test.Greeter01Test.testSystem
 import com.typesafe.config.ConfigFactory
 import org.scalatest.wordspec.AnyWordSpecLike
 import testdriven.StopSystemAfterAll

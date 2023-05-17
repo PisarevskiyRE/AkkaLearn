@@ -1,4 +1,4 @@
-package chapter3
+package chapter3test
 
 import akka.actor.{Actor, ActorSystem, Props}
 import akka.testkit.{ImplicitSender, TestKit}

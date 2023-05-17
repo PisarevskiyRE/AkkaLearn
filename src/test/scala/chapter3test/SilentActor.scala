@@ -1,7 +1,8 @@
-package chapter3
+package chapter3test
 
 import akka.actor.ActorSystem
 import akka.testkit.{TestActorRef, TestKit}
+import chapter3.SilentActor
 import org.scalatest.matchers.must.Matchers
 import org.scalatest.wordspec.AnyWordSpecLike
 import testdriven.StopSystemAfterAll
@@ -15,7 +16,7 @@ class SilentActorTest extends TestKit(ActorSystem("testsystem"))
   "A Silent Actor" must {
 
     "change internal state when it receives a message, single" in {
-      import SilentActor._
+      import chapter3.SilentActor._
 
       val silentActor = TestActorRef[SilentActor]
       silentActor ! SilentMessage("whisper")

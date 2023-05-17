@@ -1,10 +1,13 @@
-package chapter3
+package chapter3test
 
 import akka.actor.ActorSystem
 import akka.testkit.TestKit
+import chapter3.FilteringActor
 import org.scalatest.matchers.must.Matchers
 import org.scalatest.wordspec._
 import testdriven.StopSystemAfterAll
+
+import chapter3.FilteringActor._
 
 class FilteringActorTest extends TestKit(ActorSystem("testsystem"))
   with Matchers
@@ -13,7 +16,6 @@ class FilteringActorTest extends TestKit(ActorSystem("testsystem"))
   "Фильтрующий актор" must {
 
     "отфильтровывать определенные сообщения" in {
-      import chapter3.FilteringActor._
       val props = FilteringActor.props(testActor, 5)
       val filter = system.actorOf(props, "filter-1")
       filter ! Event(1)
@@ -34,7 +36,7 @@ class FilteringActorTest extends TestKit(ActorSystem("testsystem"))
 
 
     "отфильтровывать определенные сообщения с помощью expectNoMsg" in {
-      import FilteringActor._
+      import chapter3.FilteringActor._
       val props = FilteringActor.props(testActor, 5)
       val filter = system.actorOf(props, "filter-2")
       filter ! Event(1)
