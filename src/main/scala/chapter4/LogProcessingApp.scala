@@ -98,10 +98,10 @@ class FileWatcher(source: String, databaseUrls: Vector[String]) extends Actor wi
     case NewFile(file, _) =>
       logProcessor ! LogProcessor.LogFile(file)
     case SourceAbandoned(uri) if uri == source =>
-      log.info(s"$uri прекращена, остановлен наблюдатель за файлами.")
+      log.info(s"$uri прекращена, наблюдатель за файлами остановлен.")
       self ! PoisonPill
     case Terminated(`logProcessor`) =>
-      log.info(s"Обработка журнала завершена, остановлен наблюдатель за файлами.")
+      log.info(s"Обработка журнала завершилась, наблюдатель за файлами остановлен.")
       self ! PoisonPill
   }
 }
