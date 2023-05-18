@@ -26,7 +26,7 @@ class LifeCycleHooksTest extends TestKit(ActorSystem("LifCycleTest")) with AnyWo
       testActorRef.tell("msg", testActor)
       expectMsg("msg")
       system.stop(testActorRef)
-      Thread.sleep(1000)
+      Thread.sleep(1000)А
     }
   }
 }
