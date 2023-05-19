@@ -15,5 +15,7 @@ libraryDependencies ++= Seq(
   "ch.qos.logback" % "logback-classic" % "1.4.6",
   "com.typesafe.akka" %% "akka-testkit" % "2.8.0" % "test",
   "org.scalatest" %% "scalatest" % "3.2.15" % "test",
-  "org.scalameta" %% "munit" % "0.7.29" % "test"
+  "org.scalameta" %% "munit" % "0.7.29" % "test",
+  "joda-time" % "joda-time" % "2.12.5",
+   "com.github.nscala-time" %% "nscala-time" % "2.32.0"
 )
